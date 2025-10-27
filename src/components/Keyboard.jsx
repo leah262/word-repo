@@ -3,6 +3,7 @@ import LangSwitch from "./LangSwitch";
 import KeyButton from "./KeyButton";
 
 export default function Keyboard() {
+  let mivhf;
   const keyboardChars = [
     // Hebrew
     [
