@@ -1,18 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Keyboard from './components/keyboard'
-import './App.css'
+import React, { useState } from "react";
+import Keyboard from "./components/Keyboard";
+import Editor from "./components/Editor";
 
-function App() {
-  const [count, setCount] = useState(0)
-  let idol = 789;
+export default function App() {
+  const [text, setText] = useState(""); 
+
+  const handleKeyClick = (key) => {
+    setText(prev => prev + key); 
+  };
 
   return (
-    <>
-      <Keyboard></Keyboard>
-    </>
-  )
+    <div>
+      <Editor text={text} />
+      <Keyboard handleKeyClick={handleKeyClick} />
+    </div>
+  );
 }
 
-export default App
+
+// import react,{ useState } from 'react'
+// import './App.css'
+// import Keyboard from './components/Keyboard.jsx'
+// import Editor from './components/Editor.jsx'
+
+// function App() {
+//   // const [count, setCount] = useState(0)
+//   return (
+//     <>
+//     <Keyboard/>
+//     <Editor/>
+//     </>
+//   )
+// }
+
+// export default App

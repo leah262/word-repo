@@ -1,42 +1,106 @@
+/* root container */
 #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* keyboard container */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #2c2c2c;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* rows of keys */
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* buttons */
+button {
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 2px solid #555;
+  background-color: #ddd;
+  box-shadow: 0 4px #999;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+/* active / pressed state */
+button:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* optional: hover effect */
+button:hover {
+  background-color: #ccc;
+}
+
+/* LangSwitch buttons */
+div > button {
+  margin: 0 5px 10px 5px;
+  background-color: #ffeb3b;
+  border: 2px solid #fbc02d;
+}
+
+div > button:hover {
+  background-color: #fff176;
+}
+
+
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #2c2c2c;
+  border-radius: 12px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  padding: 12px 18px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 2px solid #555;
+  background-color: #ddd;
+  box-shadow: 0 4px #999;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+button:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+} */
